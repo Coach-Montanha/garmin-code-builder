@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "node server/app.js",
     "test": "node tests/test_runner.js",
     "test:unit": "node --test tests/unit/",
@@ -11,7 +14,8 @@
     "test:all": "node tests/test_runner.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "^1.63.0",
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "express": "^5.2.1"
