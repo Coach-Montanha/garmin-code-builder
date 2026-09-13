@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Garmin Running Tracker</title>
+  
+  <!-- Vendored Leaflet CSS (Zero external network dependencies) -->
+  <link rel="stylesheet" href="css/leaflet.css">
+  <!-- Minimalist Athletic Running Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    
+    <!-- Minimalist Athletic Navigation Bar -->
+    <header class="app-header">
+      <div class="brand-group">
+        <div class="brand-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">GARMIN RUNNER</h1>
+          <span class="brand-sub">Route Studio & GPS Sync</span>
+        </div>
+      </div>
+
+      <div class="header-actions-group">
+        <!-- Garmin Sync Status Badge -->
+        <div id="garmin-status" class="garmin-status-badge hidden" data-testid="garmin-status">
+          <span class="status-indicator-dot"></span>
+          <span class="status-label">Connected</span>
+        </div>
+
+        <!-- Connect Garmin Modal Trigger -->
+        <button type="button" 
+                class="btn-garmin-connect" 
+                id="connect-garmin-btn" 
+                data-testid="connect-garmin" 
+                title="Conectar ao Garmin Connect">
+          <svg class="garmin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <polyline points="12 7 12 12 15 15"/>
+          </svg>
+          <span>Garmin Connect</span>
+        </button>
+
+        <!-- Static GPX / JSON File Input & Trigger -->
+        <div class="file-import-group">
+          <label for="gpx-file-input" class="btn-file-upload" title="Importar arquivo GPX ou Garmin JSON" role="button" tabindex="0">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <span>Importar GPX</span>
+          </label>
+          <input type="file" 
+                 id="gpx-file-input" 
+                 data-testid="gpx-file-input" 
+                 accept=".gpx,.json,application/json,application/gpx+xml" 
+                 class="visually-hidden" 
+                 aria-label="Upload de arquivo GPX ou JSON" />
+        </div>
+
+        <!-- Provider Switcher Control (Feature 5) -->
+        <div class="provider-switch-group" id="provider-switch-group" data-testid="provider-toggle" role="radiogroup" aria-label="Provedor de Mapa">
+          <button type="button" 
+                  class="provider-btn active" 
+                  id="btn-provider-leaflet" 
+                  data-provider="leaflet" 
+                  role="radio" 
+                  aria-checked="true"
+                  title="OpenStreetMap / Leaflet (Livre de chaves, 0ms)">
+            <span class="status-indicator"></span>
+            <span>Leaflet (OSM)</span>
+          </button>
+          <button type="button" 
+                  class="provider-btn" 
+                  id="btn-provider-google" 
+                  data-provider="google" 
+                  role="radio" 
+                  aria-checked="false"
+                  title="Google Maps JS API">
+            <span class="status-indicator"></span>
+            <span>Google Maps</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Fullscreen Map Viewport (Feature 1 & Feature 2) -->
+    <main class="map-viewport" id="map-viewport">
+      <div id="map-container" class="map-container" data-testid="map-container" aria-label="Mapa de Corrida Interativo"></div>
+    </main>
+
+    <!-- Floating HUD Overlay Container (Anchor for Route Planner & Stats) -->
+    <section class="hud-container" id="hud-container">
+      <!-- Route Planner Card mounted by routePlanner.js -->
+      <div id="route-planner-slot"></div>
+      
+      <!-- Distance & Route HUD Overlay -->
+      <div id="route-hud" class="route-hud glass-panel hidden" data-testid="route-hud">
+        <div class="route-hud-content">
+          <div class="hud-metric-group">
+            <span class="hud-label">Distância Planejada</span>
+            <div id="planned-distance" data-testid="planned-distance" class="hud-metric-value planned-distance">
+              <span id="hud-distance" class="metric-num">--</span>
+              <span class="metric-unit">km</span>
+            </div>
+          </div>
+          <div class="hud-divider"></div>
+          <div class="hud-metric-group">
+            <span class="hud-label">Tempo Estimado (5:30/km)</span>
+            <div class="hud-metric-value">
+              <span id="hud-duration" class="metric-num">--</span>
+            </div>
+          </div>
+          <div class="hud-status-badge">
+            <span id="hud-source-badge" class="badge badge-osrm">OSRM Foot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garmin Sync & Comparison HUD (Features 19, 20, 22, 23, 24) -->
+      <div id="comparison-hud" class="comparison-panel glass-panel hidden" data-testid="comparison-hud" aria-label="Painel de Comparação de Corrida">
+        <div class="comparison-header">
+          <div class="comparison-title-group">
+            <span class="badge badge-garmin">Garmin GPS</span>
+            <h3 id="comparison-activity-name" class="comparison-title">Atividade de Corrida</h3>
+          </div>
+          <button type="button" class="btn-close-hud" id="btn-close-comparison" title="Fechar painel">&times;</button>
+        </div>
+
+        <div class="comparison-metrics-grid">
+          <!-- Actual Distance -->
+          <div class="hud-metric-group">
+            <span class="hud-label">Distância Real</span>
+            <div class="hud-metric-value">
+              <span id="actual-distance" class="metric-num">--</span>
+              <span class="metric-unit">km</span>
+            </div>
+          </div>
+
+          <!-- Actual Pace (Selector: #actual-pace, [data-testid="actual-pace"]) -->
+          <div class="hud-metric-group">
+            <span class="hud-label">Ritmo Médio</span>
+            <div class="hud-metric-value">
+              <span id="actual-pace" data-testid="actual-pace" class="actual-pace metric-num">--:--</span>
+              <span class="metric-unit">/km</span>
+            </div>
+          </div>
+
+          <!-- Actual Time (Selector: #actual-time, [data-testid="actual-time"]) -->
+          <div class="hud-metric-group">
+            <span class="hud-label">Tempo Total</span>
+            <div class="hud-metric-value">
+              <span id="actual-time" data-testid="actual-time" class="actual-time metric-num">--:--</span>
+            </div>
+          </div>
+
+          <!-- Distance Delta (Selector: #distance-delta, [data-testid="distance-delta"]) -->
+          <div class="hud-metric-group" id="delta-metric-box">
+            <span class="hud-label">Delta (&Delta;D)</span>
+            <div class="hud-metric-value">
+              <span id="distance-delta" data-testid="distance-delta" class="distance-delta metric-num">--</span>
+            </div>
+          </div>
+
+          <!-- Corridor Adherence Score (Selector: #adherence-score, [data-testid="adherence-score"]) -->
+          <div class="hud-metric-group" id="adherence-metric-box">
+            <span class="hud-label">Aderência</span>
+            <div class="hud-metric-value">
+              <span id="adherence-score" data-testid="adherence-score" class="adherence-badge metric-num">--%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Progress Bar (Selector: #comparison-bar, [data-testid="comparison-bar"]) -->
+        <div class="comparison-bar-container">
+          <progress id="comparison-bar" data-testid="comparison-bar" class="comparison-bar" value="0" max="100"></progress>
+        </div>
+
+        <!-- Save Workout Action (Selector: #save-workout-btn, [data-testid="save-workout"]) -->
+        <div class="comparison-actions">
+          <button type="button" class="btn btn-primary btn-save" id="save-workout-btn" data-testid="save-workout">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+              <polyline points="17 21 17 13 7 13 7 21"/>
+              <polyline points="7 3 7 8 15 8"/>
+            </svg>
+            <span>Salvar Treino</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="comparison-stats-slot"></div>
+    </section>
+
+    <!-- Garmin Connect OAuth & Activity Selector Modal (Features 14 & 15) -->
+    <div class="modal-backdrop garmin-modal hidden" id="garmin-modal" data-testid="garmin-modal" role="dialog" aria-modal="true" aria-labelledby="garmin-modal-title">
+      <div class="modal-card garmin-modal-card">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="modal-header-brand">
+            <div class="garmin-brand-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12,2 2,22 22,22"/>
+              </svg>
+            </div>
+            <h3 id="garmin-modal-title" class="modal-title">Garmin Connect™</h3>
+          </div>
+          <button type="button" class="btn-modal-close" id="btn-close-garmin-modal" aria-label="Fechar modal">&times;</button>
+        </div>
+
+        <!-- View 1: Disconnected / Authorize View -->
+        <div id="garmin-auth-view" class="garmin-view-section">
+          <p class="modal-desc">
+            Sincronize automaticamente seus treinos, tempo, ritmo e traçado GPS percorrido via OAuth 2.0 PKCE.
+          </p>
+          <div class="auth-security-notice">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Autenticação OAuth 2.0 PKCE segura (API simulada)</span>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" id="btn-cancel-garmin">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="authorize-btn" data-testid="authorize-btn">
+              <span>Autorizar (Authorize)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- View 2: Connected & Sync View -->
+        <div id="garmin-connected-view" class="garmin-view-section hidden">
+          <div class="connected-user-bar">
+            <div class="user-status-group">
+              <span id="garmin-modal-status" class="garmin-status-badge connected" data-testid="garmin-status">
+                <span class="status-indicator-dot"></span>
+                <span class="status-label">Connected</span>
+              </span>
+              <span id="garmin-user-name" class="connected-user-name">TestRunner_Pro</span>
+            </div>
+            <button type="button" class="btn-disconnect" id="disconnect-garmin-btn" data-testid="disconnect-garmin" title="Desconectar conta">
+              <span>Disconnect</span>
+            </button>
+          </div>
+
+          <div class="sync-actions-row">
+            <button type="button" class="btn btn-primary btn-sync-activities" id="sync-activities-btn" data-testid="sync-activities">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10"/>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+              </svg>
+              <span>Sincronizar Atividades (Sync)</span>
+            </button>
+          </div>
+
+          <!-- Activities List Container -->
+          <div class="activities-list-wrapper">
+            <h4 class="activities-heading">Atividades Sincronizadas</h4>
+            <div id="garmin-activities-list" class="activities-list" role="list" aria-label="Lista de Atividades Garmin">
+              <div class="activities-empty-state">Clique em "Sincronizar Atividades" para carregar seus treinos.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Google Maps API Key Modal Prompt -->
+    <div class="modal-backdrop hidden" id="google-key-modal">
+      <div class="modal-card">
+        <h3 class="modal-title">Configurar Google Maps</h3>
+        <p class="modal-desc">
+          Insira sua chave de API do Google Maps para carregar este provedor. 
+          Se cancelado ou com erro, o aplicativo permanecerá utilizando Leaflet/OpenStreetMap.
+        </p>
+        <div class="form-group">
+          <label for="google-api-key-input">Chave de API (Google Maps JS):</label>
+          <input type="text" id="google-api-key-input" class="text-input" placeholder="AIzaSy...">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-key">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btn-confirm-key">Salvar e Ativar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast System -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  </div>
+
+  <!-- Vendored Leaflet 1.9.4 Library -->
+  <script src="js/vendor/leaflet.js"></script>
+
+  <!-- Main ES Module Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

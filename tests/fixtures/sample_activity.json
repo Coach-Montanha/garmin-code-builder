@@ -1,0 +1,22 @@
+{
+  "activityId": 1409283741,
+  "activityName": "Morning 5K Park Run",
+  "startTimeLocal": "2026-09-12 06:45:00",
+  "startTimeGMT": "2026-09-12 09:45:00",
+  "distance": 5120.5,
+  "duration": 1530.0,
+  "elapsedDuration": 1560.0,
+  "movingDuration": 1515.0,
+  "averageSpeed": 3.34,
+  "averagePace": 298.8,
+  "elevationGain": 28.0,
+  "startLatitude": -23.5874,
+  "startLongitude": -46.6576,
+  "geoPolyline": [
+    { "lat": -23.5874, "lng": -46.6576, "ele": 760.0, "time": "2026-09-12T09:45:00Z" },
+    { "lat": -23.5860, "lng": -46.6580, "ele": 761.5, "time": "2026-09-12T09:48:30Z" },
+    { "lat": -23.5845, "lng": -46.6588, "ele": 762.0, "time": "2026-09-12T09:52:00Z" },
+    { "lat": -23.5830, "lng": -46.6595, "ele": 761.0, "time": "2026-09-12T09:56:00Z" },
+    { "lat": -23.5818, "lng": -46.6601, "ele": 760.5, "time": "2026-09-12T10:00:30Z" }
+  ]
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Garmin Connect"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Morning 5K Road Run</name>
+    <time>2026-09-12T09:45:00Z</time>
+  </metadata>
+  <trk>
+    <name>Morning 5K Road Run</name>
+    <type>running</type>
+    <trkseg>
+      <trkpt lat="-23.5874" lon="-46.6576">
+        <ele>760.0</ele>
+        <time>2026-09-12T09:45:00Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>142</gpxtpx:hr>
+            <gpxtpx:cad>84</gpxtpx:cad>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="-23.5860" lon="-46.6580">
+        <ele>761.5</ele>
+        <time>2026-09-12T09:48:30Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>148</gpxtpx:hr>
+            <gpxtpx:cad>85</gpxtpx:cad>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="-23.5845" lon="-46.6588">
+        <ele>762.0</ele>
+        <time>2026-09-12T09:52:00Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>154</gpxtpx:hr>
+            <gpxtpx:cad>86</gpxtpx:cad>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="-23.5830" lon="-46.6595">
+        <ele>761.0</ele>
+        <time>2026-09-12T09:56:00Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>158</gpxtpx:hr>
+            <gpxtpx:cad>86</gpxtpx:cad>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="-23.5818" lon="-46.6601">
+        <ele>760.5</ele>
+        <time>2026-09-12T10:00:30Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>165</gpxtpx:hr>
+            <gpxtpx:cad>88</gpxtpx:cad>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

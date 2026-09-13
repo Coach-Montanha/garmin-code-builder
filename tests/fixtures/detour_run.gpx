@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Garmin Connect"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <name>Detour Run Outside Corridor</name>
+    <time>2026-09-12T11:00:00Z</time>
+  </metadata>
+  <trk>
+    <name>Detour Run</name>
+    <type>running</type>
+    <trkseg>
+      <!-- Starts near planned start -->
+      <trkpt lat="-23.5874" lon="-46.6576">
+        <ele>760.0</ele>
+        <time>2026-09-12T11:00:00Z</time>
+      </trkpt>
+      <!-- Drastic detour 1.5 km to the east, far outside 25m corridor -->
+      <trkpt lat="-23.5870" lon="-46.6430">
+        <ele>770.0</ele>
+        <time>2026-09-12T11:08:00Z</time>
+      </trkpt>
+      <trkpt lat="-23.5820" lon="-46.6420">
+        <ele>772.0</ele>
+        <time>2026-09-12T11:16:00Z</time>
+      </trkpt>
+      <!-- Reconnects near finish -->
+      <trkpt lat="-23.5818" lon="-46.6601">
+        <ele>760.5</ele>
+        <time>2026-09-12T11:25:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,1103 @@
+{
+  "verdict": "PASS",
+  "summary": {
+    "totalBursts": 5,
+    "totalOperations": 100,
+    "burstsPassed": 5,
+    "zeroConsoleErrors": true,
+    "consoleErrorCount": 0,
+    "consoleErrors": [],
+    "zeroUncaughtExceptions": true,
+    "uncaughtExceptionCount": 0,
+    "uncaughtExceptions": [],
+    "mapInteractivityScore": "100%",
+    "totalDispatchedClicks": 25,
+    "totalLeafletClicksReceived": 31,
+    "finalClean": true
+  },
+  "latencyMetrics": {
+    "overall": {
+      "min": 7.33,
+      "max": 1153.43,
+      "mean": 240,
+      "p95": 839.81
+    },
+    "byType": {
+      "click": {
+        "min": 7.33,
+        "max": 403.5,
+        "mean": 45.32,
+        "p95": 403.5
+      },
+      "drag": {
+        "min": 103.84,
+        "max": 1153.43,
+        "mean": 370.72,
+        "p95": 861.27
+      },
+      "swap": {
+        "min": 24.28,
+        "max": 415.27,
+        "mean": 114.54,
+        "p95": 415.27
+      },
+      "reset": {
+        "min": 47.9,
+        "max": 177.38,
+        "mean": 82.71,
+        "p95": 177.38
+      }
+    }
+  },
+  "bursts": [
+    {
+      "burstIndex": 1,
+      "operationsCount": 20,
+      "durationMs": 9341.55,
+      "latencyStats": {
+        "min": 16.23,
+        "max": 1153.43,
+        "mean": 398.26,
+        "p95": 1153.43
+      },
+      "pointerIntegrity": {
+        "isMapDraggingMoving": false,
+        "isStartDraggableMoving": false,
+        "isFinishDraggableMoving": false,
+        "mapPointerEvents": "auto",
+        "cleanPointerState": true
+      },
+      "panTest": {
+        "didPan": true,
+        "initialCenter": {
+          "lat": -23.538297678767144,
+          "lng": -46.63979530334473
+        },
+        "newCenter": {
+          "lat": -23.539281287631088,
+          "lng": -46.63764953613282
+        }
+      },
+      "zoomTest": {
+        "zoomedIn": true,
+        "initialZoom": 16
+      },
+      "mapClickReceived": true,
+      "postBurstState": {
+        "hasPointA": true,
+        "hasPointB": true,
+        "startMarkerInAdapter": true,
+        "finishMarkerInAdapter": true,
+        "domMarkerCount": 2,
+        "polylinesCount": 1,
+        "polyPointsCount": 6,
+        "hudHidden": false,
+        "hudDistance": "0.89"
+      },
+      "burstPass": true,
+      "operations": [
+        {
+          "id": 1,
+          "name": "Click A (Set Start)",
+          "type": "click",
+          "latencyMs": 403.5,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 2,
+          "name": "Click B (Set Finish)",
+          "type": "click",
+          "latencyMs": 44.8,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 3,
+          "name": "Drag A (+30, +25)",
+          "type": "drag",
+          "latencyMs": 1069.91,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 4,
+          "name": "Drag B (-25, +30)",
+          "type": "drag",
+          "latencyMs": 827.6,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 5,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 117.59,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 6,
+          "name": "Drag A (+20, -20)",
+          "type": "drag",
+          "latencyMs": 839.81,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 7,
+          "name": "Drag B (-20, -15)",
+          "type": "drag",
+          "latencyMs": 502.83,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 8,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 227.13,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 9,
+          "name": "Drag A (+15, +15)",
+          "type": "drag",
+          "latencyMs": 464.08,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 10,
+          "name": "Reset Route & Markers",
+          "type": "reset",
+          "latencyMs": 177.38,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 11,
+          "name": "Click A post-Reset (Re-arm Start)",
+          "type": "click",
+          "latencyMs": 16.23,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 12,
+          "name": "Click B post-Reset (Re-arm Finish)",
+          "type": "click",
+          "latencyMs": 21.81,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 13,
+          "name": "Drag A (-25, +20)",
+          "type": "drag",
+          "latencyMs": 212.06,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 14,
+          "name": "Drag B (+25, -25)",
+          "type": "drag",
+          "latencyMs": 428.39,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 15,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 57.39,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 16,
+          "name": "Drag A (+15, +25)",
+          "type": "drag",
+          "latencyMs": 285.49,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 17,
+          "name": "Drag B (-20, -20)",
+          "type": "drag",
+          "latencyMs": 1153.43,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 18,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 415.27,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 19,
+          "name": "Drag A (-15, -15)",
+          "type": "drag",
+          "latencyMs": 250.49,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 20,
+          "name": "Drag B (+20, +20)",
+          "type": "drag",
+          "latencyMs": 450.02,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "burstIndex": 2,
+      "operationsCount": 20,
+      "durationMs": 4026.81,
+      "latencyStats": {
+        "min": 7.48,
+        "max": 393.11,
+        "mean": 146.35,
+        "p95": 393.11
+      },
+      "pointerIntegrity": {
+        "isMapDraggingMoving": false,
+        "isStartDraggableMoving": false,
+        "isFinishDraggableMoving": false,
+        "mapPointerEvents": "auto",
+        "cleanPointerState": true
+      },
+      "panTest": {
+        "didPan": true,
+        "initialCenter": {
+          "lat": -23.53377298325594,
+          "lng": -46.64226293563843
+        },
+        "newCenter": {
+          "lat": -23.5347566259539,
+          "lng": -46.64011716842652
+        }
+      },
+      "zoomTest": {
+        "zoomedIn": true,
+        "initialZoom": 16
+      },
+      "mapClickReceived": true,
+      "postBurstState": {
+        "hasPointA": true,
+        "hasPointB": true,
+        "startMarkerInAdapter": true,
+        "finishMarkerInAdapter": true,
+        "domMarkerCount": 2,
+        "polylinesCount": 1,
+        "polyPointsCount": 6,
+        "hudHidden": false,
+        "hudDistance": "0.89"
+      },
+      "burstPass": true,
+      "operations": [
+        {
+          "id": 1,
+          "name": "Click A (Set Start)",
+          "type": "click",
+          "latencyMs": 18.72,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 2,
+          "name": "Click B (Set Finish)",
+          "type": "click",
+          "latencyMs": 25.14,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 3,
+          "name": "Drag A (+30, +25)",
+          "type": "drag",
+          "latencyMs": 155.45,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 4,
+          "name": "Drag B (-25, +30)",
+          "type": "drag",
+          "latencyMs": 250.68,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 5,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 183.76,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 6,
+          "name": "Drag A (+20, -20)",
+          "type": "drag",
+          "latencyMs": 393.11,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 7,
+          "name": "Drag B (-20, -15)",
+          "type": "drag",
+          "latencyMs": 293.23,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 8,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 120.77,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 9,
+          "name": "Drag A (+15, +15)",
+          "type": "drag",
+          "latencyMs": 183.13,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 10,
+          "name": "Reset Route & Markers",
+          "type": "reset",
+          "latencyMs": 67.02,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 11,
+          "name": "Click A post-Reset (Re-arm Start)",
+          "type": "click",
+          "latencyMs": 7.48,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 12,
+          "name": "Click B post-Reset (Re-arm Finish)",
+          "type": "click",
+          "latencyMs": 40.19,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 13,
+          "name": "Drag A (-25, +20)",
+          "type": "drag",
+          "latencyMs": 283.67,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 14,
+          "name": "Drag B (+25, -25)",
+          "type": "drag",
+          "latencyMs": 165.88,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 15,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 47.62,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 16,
+          "name": "Drag A (+15, +25)",
+          "type": "drag",
+          "latencyMs": 151.25,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 17,
+          "name": "Drag B (-20, -20)",
+          "type": "drag",
+          "latencyMs": 103.84,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 18,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 44.04,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 19,
+          "name": "Drag A (-15, -15)",
+          "type": "drag",
+          "latencyMs": 250.95,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 20,
+          "name": "Drag B (+20, +20)",
+          "type": "drag",
+          "latencyMs": 141.14,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "burstIndex": 3,
+      "operationsCount": 20,
+      "durationMs": 7009.21,
+      "latencyStats": {
+        "min": 7.33,
+        "max": 845.96,
+        "mean": 288.27,
+        "p95": 845.96
+      },
+      "pointerIntegrity": {
+        "isMapDraggingMoving": false,
+        "isStartDraggableMoving": false,
+        "isFinishDraggableMoving": false,
+        "mapPointerEvents": "auto",
+        "cleanPointerState": true
+      },
+      "panTest": {
+        "didPan": true,
+        "initialCenter": {
+          "lat": -23.52973997130487,
+          "lng": -46.6435718536377
+        },
+        "newCenter": {
+          "lat": -23.53072364415505,
+          "lng": -46.64142608642579
+        }
+      },
+      "zoomTest": {
+        "zoomedIn": true,
+        "initialZoom": 16
+      },
+      "mapClickReceived": true,
+      "postBurstState": {
+        "hasPointA": true,
+        "hasPointB": true,
+        "startMarkerInAdapter": true,
+        "finishMarkerInAdapter": true,
+        "domMarkerCount": 2,
+        "polylinesCount": 1,
+        "polyPointsCount": 6,
+        "hudHidden": false,
+        "hudDistance": "0.84"
+      },
+      "burstPass": true,
+      "operations": [
+        {
+          "id": 1,
+          "name": "Click A (Set Start)",
+          "type": "click",
+          "latencyMs": 20.1,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 2,
+          "name": "Click B (Set Finish)",
+          "type": "click",
+          "latencyMs": 7.33,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 3,
+          "name": "Drag A (+30, +25)",
+          "type": "drag",
+          "latencyMs": 369.74,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 4,
+          "name": "Drag B (-25, +30)",
+          "type": "drag",
+          "latencyMs": 659.52,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 5,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 124.17,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 6,
+          "name": "Drag A (+20, -20)",
+          "type": "drag",
+          "latencyMs": 236.74,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 7,
+          "name": "Drag B (-20, -15)",
+          "type": "drag",
+          "latencyMs": 277.35,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 8,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 138.41,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 9,
+          "name": "Drag A (+15, +15)",
+          "type": "drag",
+          "latencyMs": 417.68,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 10,
+          "name": "Reset Route & Markers",
+          "type": "reset",
+          "latencyMs": 54.24,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 11,
+          "name": "Click A post-Reset (Re-arm Start)",
+          "type": "click",
+          "latencyMs": 22.05,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 12,
+          "name": "Click B post-Reset (Re-arm Finish)",
+          "type": "click",
+          "latencyMs": 59.84,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 13,
+          "name": "Drag A (-25, +20)",
+          "type": "drag",
+          "latencyMs": 640.91,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 14,
+          "name": "Drag B (+25, -25)",
+          "type": "drag",
+          "latencyMs": 183.28,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 15,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 65.34,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 16,
+          "name": "Drag A (+15, +25)",
+          "type": "drag",
+          "latencyMs": 564.3,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 17,
+          "name": "Drag B (-20, -20)",
+          "type": "drag",
+          "latencyMs": 393.08,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 18,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 149.73,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 19,
+          "name": "Drag A (-15, -15)",
+          "type": "drag",
+          "latencyMs": 535.61,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 20,
+          "name": "Drag B (+20, +20)",
+          "type": "drag",
+          "latencyMs": 845.96,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "burstIndex": 4,
+      "operationsCount": 20,
+      "durationMs": 5071.67,
+      "latencyStats": {
+        "min": 7.74,
+        "max": 861.27,
+        "mean": 202.67,
+        "p95": 861.27
+      },
+      "pointerIntegrity": {
+        "isMapDraggingMoving": false,
+        "isStartDraggableMoving": false,
+        "isFinishDraggableMoving": false,
+        "mapPointerEvents": "auto",
+        "cleanPointerState": true
+      },
+      "panTest": {
+        "didPan": true,
+        "initialCenter": {
+          "lat": -23.525805206370485,
+          "lng": -46.644773483276374
+        },
+        "newCenter": {
+          "lat": -23.52678890863367,
+          "lng": -46.64262771606445
+        }
+      },
+      "zoomTest": {
+        "zoomedIn": true,
+        "initialZoom": 16
+      },
+      "mapClickReceived": true,
+      "postBurstState": {
+        "hasPointA": true,
+        "hasPointB": true,
+        "startMarkerInAdapter": true,
+        "finishMarkerInAdapter": true,
+        "domMarkerCount": 2,
+        "polylinesCount": 1,
+        "polyPointsCount": 6,
+        "hudHidden": false,
+        "hudDistance": "0.84"
+      },
+      "burstPass": true,
+      "operations": [
+        {
+          "id": 1,
+          "name": "Click A (Set Start)",
+          "type": "click",
+          "latencyMs": 22.83,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 2,
+          "name": "Click B (Set Finish)",
+          "type": "click",
+          "latencyMs": 47.75,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 3,
+          "name": "Drag A (+30, +25)",
+          "type": "drag",
+          "latencyMs": 727.16,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 4,
+          "name": "Drag B (-25, +30)",
+          "type": "drag",
+          "latencyMs": 300.36,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 5,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 138.32,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 6,
+          "name": "Drag A (+20, -20)",
+          "type": "drag",
+          "latencyMs": 334.5,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 7,
+          "name": "Drag B (-20, -15)",
+          "type": "drag",
+          "latencyMs": 861.27,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 8,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 64.24,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 9,
+          "name": "Drag A (+15, +15)",
+          "type": "drag",
+          "latencyMs": 148.66,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 10,
+          "name": "Reset Route & Markers",
+          "type": "reset",
+          "latencyMs": 47.9,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 11,
+          "name": "Click A post-Reset (Re-arm Start)",
+          "type": "click",
+          "latencyMs": 7.74,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 12,
+          "name": "Click B post-Reset (Re-arm Finish)",
+          "type": "click",
+          "latencyMs": 58.99,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 13,
+          "name": "Drag A (-25, +20)",
+          "type": "drag",
+          "latencyMs": 175.66,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 14,
+          "name": "Drag B (+25, -25)",
+          "type": "drag",
+          "latencyMs": 111.36,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 15,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 24.28,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 16,
+          "name": "Drag A (+15, +25)",
+          "type": "drag",
+          "latencyMs": 139.86,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 17,
+          "name": "Drag B (-20, -20)",
+          "type": "drag",
+          "latencyMs": 287.03,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 18,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 97.49,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 19,
+          "name": "Drag A (-15, -15)",
+          "type": "drag",
+          "latencyMs": 194.75,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 20,
+          "name": "Drag B (+20, +20)",
+          "type": "drag",
+          "latencyMs": 263.32,
+          "success": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "burstIndex": 5,
+      "operationsCount": 20,
+      "durationMs": 4280.72,
+      "latencyStats": {
+        "min": 12.13,
+        "max": 473.2,
+        "mean": 164.46,
+        "p95": 473.2
+      },
+      "pointerIntegrity": {
+        "isMapDraggingMoving": false,
+        "isStartDraggableMoving": false,
+        "isFinishDraggableMoving": false,
+        "mapPointerEvents": "auto",
+        "cleanPointerState": true
+      },
+      "panTest": {
+        "didPan": true,
+        "initialCenter": {
+          "lat": -23.522716333474392,
+          "lng": -46.64543867111207
+        },
+        "newCenter": {
+          "lat": -23.52370005882413,
+          "lng": -46.64329290390015
+        }
+      },
+      "zoomTest": {
+        "zoomedIn": true,
+        "initialZoom": 16
+      },
+      "mapClickReceived": true,
+      "postBurstState": {
+        "hasPointA": true,
+        "hasPointB": true,
+        "startMarkerInAdapter": true,
+        "finishMarkerInAdapter": true,
+        "domMarkerCount": 2,
+        "polylinesCount": 1,
+        "polyPointsCount": 6,
+        "hudHidden": false,
+        "hudDistance": "0.89"
+      },
+      "burstPass": true,
+      "operations": [
+        {
+          "id": 1,
+          "name": "Click A (Set Start)",
+          "type": "click",
+          "latencyMs": 12.13,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 2,
+          "name": "Click B (Set Finish)",
+          "type": "click",
+          "latencyMs": 36.64,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 3,
+          "name": "Drag A (+30, +25)",
+          "type": "drag",
+          "latencyMs": 448.54,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 4,
+          "name": "Drag B (-25, +30)",
+          "type": "drag",
+          "latencyMs": 153.02,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 5,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 87,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 6,
+          "name": "Drag A (+20, -20)",
+          "type": "drag",
+          "latencyMs": 200.16,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 7,
+          "name": "Drag B (-20, -15)",
+          "type": "drag",
+          "latencyMs": 282.04,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 8,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 59.07,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 9,
+          "name": "Drag A (+15, +15)",
+          "type": "drag",
+          "latencyMs": 178.64,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 10,
+          "name": "Reset Route & Markers",
+          "type": "reset",
+          "latencyMs": 67.02,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 11,
+          "name": "Click A post-Reset (Re-arm Start)",
+          "type": "click",
+          "latencyMs": 15.59,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 12,
+          "name": "Click B post-Reset (Re-arm Finish)",
+          "type": "click",
+          "latencyMs": 17.49,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 13,
+          "name": "Drag A (-25, +20)",
+          "type": "drag",
+          "latencyMs": 300.52,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 14,
+          "name": "Drag B (+25, -25)",
+          "type": "drag",
+          "latencyMs": 104.77,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 15,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 34.42,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 16,
+          "name": "Drag A (+15, +25)",
+          "type": "drag",
+          "latencyMs": 308.22,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 17,
+          "name": "Drag B (-20, -20)",
+          "type": "drag",
+          "latencyMs": 215.25,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 18,
+          "name": "Swap (A <-> B)",
+          "type": "swap",
+          "latencyMs": 94.67,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 19,
+          "name": "Drag A (-15, -15)",
+          "type": "drag",
+          "latencyMs": 473.2,
+          "success": true,
+          "error": null
+        },
+        {
+          "id": 20,
+          "name": "Drag B (+20, +20)",
+          "type": "drag",
+          "latencyMs": 200.77,
+          "success": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "finalCleanState": {
+    "pointA": null,
+    "pointB": null,
+    "markersCount": 0,
+    "adapterMarkers": 0,
+    "domMarkerCount": 0,
+    "polylinesCount": 0,
+    "hudHidden": true
+  }
+}
