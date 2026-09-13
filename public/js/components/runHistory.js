@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Componente RunHistory - Painel de Histórico e Dashboard de Treinos Salvos
  */
 export class RunHistory {
@@ -85,31 +85,46 @@ export class RunHistory {
   async fetchSavedRuns() {
     try {
       const res = await fetch('/api/runs');
+      if (!res.ok) throw new Error('API not available');
       const data = await res.json();
       if (data.success) {
         this.runs = data.runs;
         this.renderHistoryList();
+        return;
       }
     } catch (err) {
-      this.onToast('Erro ao carregar histórico de treinos', 'error');
+      // LocalStorage Fallback for static hosts (Lovable / GitHub Pages)
+      const localData = localStorage.getItem('garmin_saved_runs');
+      if (localData) {
+        try {
+          this.runs = JSON.parse(localData);
+        } catch (e) {
+          this.runs = [];
+        }
+      } else {
+        this.runs = [];
+      }
+      this.renderHistoryList();
     }
   }
 
   async addRun(runPayload) {
+    const id = runPayload.id || 'run_' + Date.now();
+    const newRun = { ...runPayload, id, createdAt: new Date().toISOString() };
+    
+    this.runs.unshift(newRun);
+    localStorage.setItem('garmin_saved_runs', JSON.stringify(this.runs));
+    this.renderHistoryList();
+    this.onToast('Treino salvo no histórico!', 'success');
+
     try {
-      const res = await fetch('/api/runs', {
+      await fetch('/api/runs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(runPayload)
       });
-      const data = await res.json();
-      if (data.success) {
-        this.runs.unshift(data.run);
-        this.onToast('Treino salvo no histórico!', 'success');
-        this.fetchSavedRuns();
-      }
     } catch (err) {
-      this.onToast('Erro ao salvar treino no servidor', 'error');
+      // Background sync silent fallback for static host
     }
   }
 

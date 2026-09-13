@@ -74,27 +74,11 @@ export class LeafletAdapter {
 
   mountTileLayer() {
     const L = window.L;
-    const cartoUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
     const osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-    let errorCount = 0;
-
-    this.tileLayer = L.tileLayer(cartoUrl, {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 20
-    });
-
-    this.tileLayer.on('tileerror', () => {
-      errorCount++;
-      if (errorCount >= 3 && this.map) {
-        console.warn('[LeafletAdapter] CartoDB tile errors detected; falling back to standard OSM tiles.');
-        this.map.removeLayer(this.tileLayer);
-        this.tileLayer = L.tileLayer(osmUrl, {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          maxZoom: 19
-        }).addTo(this.map);
-      }
+    this.tileLayer = L.tileLayer(osmUrl, {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
     });
 
     this.tileLayer.addTo(this.map);
