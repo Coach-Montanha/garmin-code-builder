@@ -1,0 +1,1095 @@
+{
+  "nodes": [
+    {
+      "id": "index.html",
+      "label": "index.html",
+      "type": "view",
+      "size": 14210,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "jsconfig.json",
+      "label": "jsconfig.json",
+      "type": "code",
+      "size": 279,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "ORIGINAL_REQUEST.md",
+      "label": "ORIGINAL_REQUEST.md",
+      "type": "code",
+      "size": 2505,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "package-lock.json",
+      "label": "package-lock.json",
+      "type": "code",
+      "size": 65420,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "package.json",
+      "label": "package.json",
+      "type": "code",
+      "size": 589,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "playwright.config.js",
+      "label": "playwright.config.js",
+      "type": "code",
+      "size": 875,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "PROJECT.md",
+      "label": "PROJECT.md",
+      "type": "code",
+      "size": 13914,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "public/css/leaflet.css",
+      "label": "leaflet.css",
+      "type": "style",
+      "size": 14806,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "public/css/style.css",
+      "label": "style.css",
+      "type": "style",
+      "size": 30719,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "public/index.html",
+      "label": "index.html",
+      "type": "view",
+      "size": 13958,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "public/js/app.js",
+      "label": "app.js",
+      "type": "code",
+      "size": 13253,
+      "exports": [
+        "App"
+      ],
+      "functions": [
+        "App",
+        "pad"
+      ]
+    },
+    {
+      "id": "public/js/components/garminSync.js",
+      "label": "garminSync.js",
+      "type": "code",
+      "size": 11230,
+      "exports": [
+        "GarminSync"
+      ],
+      "functions": [
+        "GarminSync"
+      ]
+    },
+    {
+      "id": "public/js/components/routeComparison.js",
+      "label": "routeComparison.js",
+      "type": "code",
+      "size": 5323,
+      "exports": [
+        "RouteComparison"
+      ],
+      "functions": [
+        "RouteComparison"
+      ]
+    },
+    {
+      "id": "public/js/components/routePlanner.js",
+      "label": "routePlanner.js",
+      "type": "code",
+      "size": 26456,
+      "exports": [
+        "RoutePlanner"
+      ],
+      "functions": [
+        "RoutePlanner"
+      ]
+    },
+    {
+      "id": "public/js/components/runHistory.js",
+      "label": "runHistory.js",
+      "type": "code",
+      "size": 5547,
+      "exports": [
+        "RunHistory"
+      ],
+      "functions": [
+        "RunHistory"
+      ]
+    },
+    {
+      "id": "public/js/components/statsOverlay.js",
+      "label": "statsOverlay.js",
+      "type": "code",
+      "size": 2212,
+      "exports": [
+        "RouteHud",
+        "StatsOverlay"
+      ],
+      "functions": [
+        "RouteHud"
+      ]
+    },
+    {
+      "id": "public/js/components/syncModal.js",
+      "label": "syncModal.js",
+      "type": "code",
+      "size": 11287,
+      "exports": [
+        "SyncModal"
+      ],
+      "functions": [
+        "SyncModal"
+      ]
+    },
+    {
+      "id": "public/js/map/googleAdapter.js",
+      "label": "googleAdapter.js",
+      "type": "code",
+      "size": 10287,
+      "exports": [
+        "GoogleAdapter"
+      ],
+      "functions": [
+        "GoogleAdapter",
+        "cleanup"
+      ]
+    },
+    {
+      "id": "public/js/map/leafletAdapter.js",
+      "label": "leafletAdapter.js",
+      "type": "code",
+      "size": 7728,
+      "exports": [
+        "LeafletAdapter"
+      ],
+      "functions": [
+        "LeafletAdapter",
+        "latlng",
+        "latlng"
+      ]
+    },
+    {
+      "id": "public/js/map/mapAdapter.js",
+      "label": "mapAdapter.js",
+      "type": "code",
+      "size": 9090,
+      "exports": [
+        "MapManager"
+      ],
+      "functions": [
+        "MapManager"
+      ]
+    },
+    {
+      "id": "public/js/services/garminService.js",
+      "label": "garminService.js",
+      "type": "code",
+      "size": 17866,
+      "exports": [
+        "validateXmlStructure",
+        "parseGpxXml",
+        "parseGarminActivityJson",
+        "GarminService",
+        "garminService"
+      ],
+      "functions": [
+        "validateXmlStructure",
+        "parseGpxXml",
+        "dtSec",
+        "speedMps",
+        "parseGarminActivityJson",
+        "GarminService"
+      ]
+    },
+    {
+      "id": "public/js/services/routingService.js",
+      "label": "routingService.js",
+      "type": "code",
+      "size": 13436,
+      "exports": [
+        "calculateHaversineDistance",
+        "interpolateGeodesicPath",
+        "parseOsrmGeoJson",
+        "formatDuration",
+        "formatPhotonProperties",
+        "RoutingService",
+        "routingService",
+        "geocodingService"
+      ],
+      "functions": [
+        "calculateHaversineDistance",
+        "interpolateGeodesicPath",
+        "parseOsrmGeoJson",
+        "formatDuration",
+        "formatPhotonProperties",
+        "RoutingService"
+      ]
+    },
+    {
+      "id": "public/js/vendor/leaflet.js",
+      "label": "leaflet.js",
+      "type": "code",
+      "size": 147552,
+      "exports": [],
+      "functions": [
+        "l",
+        "N",
+        "a",
+        "h",
+        "j",
+        "H",
+        "u",
+        "i",
+        "W",
+        "F",
+        "c",
+        "U",
+        "q",
+        "G",
+        "Y",
+        "J",
+        "x",
+        "r",
+        "et",
+        "e",
+        "p",
+        "m",
+        "f",
+        "_",
+        "s",
+        "g",
+        "v",
+        "w",
+        "at",
+        "ht",
+        "ct",
+        "dt",
+        "y",
+        "Jt",
+        "Qt",
+        "te",
+        "ee",
+        "ne",
+        "e",
+        "_e",
+        "pe",
+        "P",
+        "T",
+        "me",
+        "fe",
+        "ge",
+        "ve",
+        "M",
+        "z",
+        "ye",
+        "xe",
+        "C",
+        "we",
+        "be",
+        "Z",
+        "Pe",
+        "Le",
+        "Te",
+        "Me",
+        "ze",
+        "Ce",
+        "Ze",
+        "S",
+        "k",
+        "Se",
+        "ke",
+        "Oe",
+        "Ae",
+        "Be",
+        "Ie",
+        "O",
+        "Re",
+        "Ne",
+        "De",
+        "He",
+        "We",
+        "d",
+        "_",
+        "p",
+        "f",
+        "t",
+        "Ue",
+        "t",
+        "Je",
+        "Qe",
+        "ei",
+        "t",
+        "ii",
+        "ni",
+        "oi",
+        "si",
+        "ri",
+        "I",
+        "ai",
+        "hi",
+        "e",
+        "bi",
+        "Pi",
+        "Li",
+        "Ti",
+        "Mi",
+        "zi",
+        "Ci",
+        "Zi",
+        "Si",
+        "ji",
+        "Ui",
+        "Ki",
+        "t"
+      ]
+    },
+    {
+      "id": "public/vendor/leaflet.js",
+      "label": "leaflet.js",
+      "type": "code",
+      "size": 147552,
+      "exports": [],
+      "functions": [
+        "l",
+        "N",
+        "a",
+        "h",
+        "j",
+        "H",
+        "u",
+        "i",
+        "W",
+        "F",
+        "c",
+        "U",
+        "q",
+        "G",
+        "Y",
+        "J",
+        "x",
+        "r",
+        "et",
+        "e",
+        "p",
+        "m",
+        "f",
+        "_",
+        "s",
+        "g",
+        "v",
+        "w",
+        "at",
+        "ht",
+        "ct",
+        "dt",
+        "y",
+        "Jt",
+        "Qt",
+        "te",
+        "ee",
+        "ne",
+        "e",
+        "_e",
+        "pe",
+        "P",
+        "T",
+        "me",
+        "fe",
+        "ge",
+        "ve",
+        "M",
+        "z",
+        "ye",
+        "xe",
+        "C",
+        "we",
+        "be",
+        "Z",
+        "Pe",
+        "Le",
+        "Te",
+        "Me",
+        "ze",
+        "Ce",
+        "Ze",
+        "S",
+        "k",
+        "Se",
+        "ke",
+        "Oe",
+        "Ae",
+        "Be",
+        "Ie",
+        "O",
+        "Re",
+        "Ne",
+        "De",
+        "He",
+        "We",
+        "d",
+        "_",
+        "p",
+        "f",
+        "t",
+        "Ue",
+        "t",
+        "Je",
+        "Qe",
+        "ei",
+        "t",
+        "ii",
+        "ni",
+        "oi",
+        "si",
+        "ri",
+        "I",
+        "ai",
+        "hi",
+        "e",
+        "bi",
+        "Pi",
+        "Li",
+        "Ti",
+        "Mi",
+        "zi",
+        "Ci",
+        "Zi",
+        "Si",
+        "ji",
+        "Ui",
+        "Ki",
+        "t"
+      ]
+    },
+    {
+      "id": "server/app.js",
+      "label": "app.js",
+      "type": "code",
+      "size": 3361,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "server/routes/garminRoutes.js",
+      "label": "garminRoutes.js",
+      "type": "code",
+      "size": 12992,
+      "exports": [
+        "verifyPkce",
+        "resetMockSession",
+        "PRESEEDED_ACTIVITIES"
+      ],
+      "functions": [
+        "verifyPkce",
+        "resetMockSession",
+        "handleTokenExchange",
+        "handleDisconnect"
+      ]
+    },
+    {
+      "id": "tests/adversarial_interaction_stress.js",
+      "label": "adversarial_interaction_stress.js",
+      "type": "code",
+      "size": 35181,
+      "exports": [],
+      "functions": [
+        "injectMockGoogleMaps",
+        "setupNetworkMocks",
+        "runAdversarialHarness",
+        "recordResult"
+      ]
+    },
+    {
+      "id": "tests/challenger_m1_interaction_lifecycle_stress.js",
+      "label": "challenger_m1_interaction_lifecycle_stress.js",
+      "type": "code",
+      "size": 20343,
+      "exports": [],
+      "functions": [
+        "calculateStats",
+        "haversineDistanceKm",
+        "setupNetworkMocks",
+        "dragMarker",
+        "runEmpiricalLifecycleStress",
+        "isStartDraggableMoving",
+        "isFinishDraggableMoving",
+        "didPan",
+        "mapClickReceived",
+        "finalVerdict"
+      ]
+    },
+    {
+      "id": "tests/challenger_stress_results.json",
+      "label": "challenger_stress_results.json",
+      "type": "code",
+      "size": 26104,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/e2e/helpers.js",
+      "label": "helpers.js",
+      "type": "code",
+      "size": 9107,
+      "exports": [
+        "FIXTURE_DIR",
+        "SELECTORS",
+        "haversineDistanceMeters",
+        "calculatePathDistanceKm",
+        "speedToPaceString"
+      ],
+      "functions": [
+        "haversineDistanceMeters",
+        "toRad",
+        "calculatePathDistanceKm",
+        "speedToPaceString",
+        "setupStandardMocks"
+      ]
+    },
+    {
+      "id": "tests/e2e/tier1_feature_coverage.spec.js",
+      "label": "tier1_feature_coverage.spec.js",
+      "type": "code",
+      "size": 12909,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/e2e/tier2_boundary_corner.spec.js",
+      "label": "tier2_boundary_corner.spec.js",
+      "type": "code",
+      "size": 8135,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/e2e/tier3_cross_feature.spec.js",
+      "label": "tier3_cross_feature.spec.js",
+      "type": "code",
+      "size": 6663,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/e2e/tier4_real_world.spec.js",
+      "label": "tier4_real_world.spec.js",
+      "type": "code",
+      "size": 5220,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/e2e/tier5_adversarial_stress.spec.js",
+      "label": "tier5_adversarial_stress.spec.js",
+      "type": "code",
+      "size": 10386,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/empirical_concurrency_stress.js",
+      "label": "empirical_concurrency_stress.js",
+      "type": "code",
+      "size": 31717,
+      "exports": [],
+      "functions": [
+        "haversineDistanceKm",
+        "calculateMockRouteDistance",
+        "setupThrottledNetworkMocks",
+        "dragMarkerById",
+        "runConcurrencyStressSuite",
+        "record"
+      ]
+    },
+    {
+      "id": "tests/fixtures/corrupt_activity.json",
+      "label": "corrupt_activity.json",
+      "type": "code",
+      "size": 80,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/fixtures/sample_activity.json",
+      "label": "sample_activity.json",
+      "type": "code",
+      "size": 852,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/reproduce_dragend_concurrency_defect.js",
+      "label": "reproduce_dragend_concurrency_defect.js",
+      "type": "code",
+      "size": 3507,
+      "exports": [],
+      "functions": [
+        "reproduceDefect"
+      ]
+    },
+    {
+      "id": "tests/stress_adversarial_suite.js",
+      "label": "stress_adversarial_suite.js",
+      "type": "code",
+      "size": 21815,
+      "exports": [],
+      "functions": [
+        "injectMockGoogleMaps",
+        "setupDefaultMocks",
+        "runSuite",
+        "record"
+      ]
+    },
+    {
+      "id": "tests/test_runner.js",
+      "label": "test_runner.js",
+      "type": "code",
+      "size": 4840,
+      "exports": [],
+      "functions": [
+        "printHelp",
+        "isServerRunning",
+        "run",
+        "duration"
+      ]
+    },
+    {
+      "id": "tests/unit/adversarial_routing.test.js",
+      "label": "adversarial_routing.test.js",
+      "type": "code",
+      "size": 17778,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/unit/adversarial_stress_diagnostics.js",
+      "label": "adversarial_stress_diagnostics.js",
+      "type": "code",
+      "size": 10725,
+      "exports": [],
+      "functions": [
+        "analyzeSlerpDistribution"
+      ]
+    },
+    {
+      "id": "tests/unit/garmin_server_api.test.js",
+      "label": "garmin_server_api.test.js",
+      "type": "code",
+      "size": 7408,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/unit/gpx_parser.test.js",
+      "label": "gpx_parser.test.js",
+      "type": "code",
+      "size": 4601,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "tests/unit/routing_fallback.test.js",
+      "label": "routing_fallback.test.js",
+      "type": "code",
+      "size": 5702,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "TEST_INFRA.md",
+      "label": "TEST_INFRA.md",
+      "type": "code",
+      "size": 15575,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "TEST_READY.md",
+      "label": "TEST_READY.md",
+      "type": "code",
+      "size": 5894,
+      "exports": [],
+      "functions": []
+    },
+    {
+      "id": "vite.config.js",
+      "label": "vite.config.js",
+      "type": "code",
+      "size": 227,
+      "exports": [],
+      "functions": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "playwright.config.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./map/mapAdapter.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/routePlanner.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/statsOverlay.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/syncModal.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./services/garminService.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/garminSync.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/routeComparison.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/app.js",
+      "target": "./components/runHistory.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/components/routePlanner.js",
+      "target": "../services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/components/statsOverlay.js",
+      "target": "../services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/components/syncModal.js",
+      "target": "../services/garminService.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/map/mapAdapter.js",
+      "target": "./leafletAdapter.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/map/mapAdapter.js",
+      "target": "./googleAdapter.js",
+      "type": "imports"
+    },
+    {
+      "source": "public/js/services/garminService.js",
+      "target": "./routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "server/app.js",
+      "target": "express",
+      "type": "imports"
+    },
+    {
+      "source": "server/app.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "server/app.js",
+      "target": "node:url",
+      "type": "imports"
+    },
+    {
+      "source": "server/app.js",
+      "target": "./routes/garminRoutes.js",
+      "type": "imports"
+    },
+    {
+      "source": "server/routes/garminRoutes.js",
+      "target": "express",
+      "type": "imports"
+    },
+    {
+      "source": "server/routes/garminRoutes.js",
+      "target": "node:crypto",
+      "type": "imports"
+    },
+    {
+      "source": "tests/adversarial_interaction_stress.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/challenger_m1_interaction_lifecycle_stress.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/challenger_m1_interaction_lifecycle_stress.js",
+      "target": "perf_hooks",
+      "type": "imports"
+    },
+    {
+      "source": "tests/challenger_m1_interaction_lifecycle_stress.js",
+      "target": "fs",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/helpers.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/helpers.js",
+      "target": "node:url",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier1_feature_coverage.spec.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier1_feature_coverage.spec.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier1_feature_coverage.spec.js",
+      "target": "./helpers.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier2_boundary_corner.spec.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier2_boundary_corner.spec.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier2_boundary_corner.spec.js",
+      "target": "./helpers.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier3_cross_feature.spec.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier3_cross_feature.spec.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier3_cross_feature.spec.js",
+      "target": "./helpers.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier4_real_world.spec.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier4_real_world.spec.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier4_real_world.spec.js",
+      "target": "./helpers.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier5_adversarial_stress.spec.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/e2e/tier5_adversarial_stress.spec.js",
+      "target": "./helpers.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/empirical_concurrency_stress.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/reproduce_dragend_concurrency_defect.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/stress_adversarial_suite.js",
+      "target": "@playwright/test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/test_runner.js",
+      "target": "node:child_process",
+      "type": "imports"
+    },
+    {
+      "source": "tests/test_runner.js",
+      "target": "node:http",
+      "type": "imports"
+    },
+    {
+      "source": "tests/test_runner.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/test_runner.js",
+      "target": "node:url",
+      "type": "imports"
+    },
+    {
+      "source": "tests/test_runner.js",
+      "target": "node:fs",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/adversarial_routing.test.js",
+      "target": "node:test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/adversarial_routing.test.js",
+      "target": "node:assert/strict",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/adversarial_routing.test.js",
+      "target": "../../public/js/services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/adversarial_stress_diagnostics.js",
+      "target": "../../public/js/services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/garmin_server_api.test.js",
+      "target": "node:test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/garmin_server_api.test.js",
+      "target": "node:assert/strict",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/garmin_server_api.test.js",
+      "target": "node:crypto",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/garmin_server_api.test.js",
+      "target": "express",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/garmin_server_api.test.js",
+      "target": "../../server/routes/garminRoutes.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "node:test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "node:assert/strict",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "node:fs",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "node:path",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "node:url",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/gpx_parser.test.js",
+      "target": "../../public/js/services/garminService.js",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/routing_fallback.test.js",
+      "target": "node:test",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/routing_fallback.test.js",
+      "target": "node:assert/strict",
+      "type": "imports"
+    },
+    {
+      "source": "tests/unit/routing_fallback.test.js",
+      "target": "../../public/js/services/routingService.js",
+      "type": "imports"
+    },
+    {
+      "source": "vite.config.js",
+      "target": "vite",
+      "type": "imports"
+    }
+  ]
+}
